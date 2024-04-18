@@ -41,7 +41,7 @@ export const Pagination = () => {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `${BASE_URL}?_page=${page}&limit=${visible}`
+        `${BASE_URL}?_page=${page}&_limit=${visible}`
       );
       const data = await response.json();
       setPosts(data);
